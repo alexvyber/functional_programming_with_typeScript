@@ -1,0 +1,1 @@
+Chapters 1-10 have code files, some of the code files are non-executable and do not provide any output. Some examples will fail at compilation time or runtime time to showcase how the compiler can detect specific errors. All the errors that are meant to happen on propose have been annotated with a commend // Error.
