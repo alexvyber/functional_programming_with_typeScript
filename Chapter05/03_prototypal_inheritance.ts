@@ -4,7 +4,7 @@ namespace prototypal_inheritance_demo_1 {
     public surname: string
     public age: number = 0
 
-    public constructor(name: string, surname: string) {
+    constructor(name: string, surname: string) {
       this.name = name
       this.surname = surname
     }
@@ -18,7 +18,7 @@ namespace prototypal_inheritance_demo_1 {
   class SuperHero extends Person {
     public superpower: string
 
-    public constructor(name: string, surname: string, superpower: string) {
+    constructor(name: string, surname: string, superpower: string) {
       super(name, surname)
       this.superpower = superpower
     }

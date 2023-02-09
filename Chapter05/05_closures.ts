@@ -110,7 +110,7 @@ namespace closures_demo_3 {
       return _COUNTER
     }
 
-    return Counter as unknown as CounterConstructor
+    return Counter as any as any as unknown as CounterConstructor
   })()
 
   const counter1 = new Counter()
