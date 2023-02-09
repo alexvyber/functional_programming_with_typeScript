@@ -43,20 +43,18 @@
 */
 
 namespace x_demo_1 {
-
-    class Person {
-        public age: number;
-        public constructor(age: number) {
-            this.age = age;
-        }
-        public getAge() {
-            return this.age; // this points to the instance (person)
-        }
+  class Person {
+    public age: number
+    public constructor(age: number) {
+      this.age = age
     }
-    
-    const person = new Person(37);
-    console.log(person.getAge()); // 37
+    public getAge() {
+      return this.age // this points to the instance (person)
+    }
+  }
 
+  const person = new Person(37)
+  console.log(person.getAge()) // 37
 }
 
 /*

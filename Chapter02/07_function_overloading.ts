@@ -1,54 +1,54 @@
 namespace function_overloading_demo_1 {
-  function test(name: string): string; // overloaded signature
-  function test(age: number): string; // overloaded signature
-  function test(single: boolean): string; // overloaded signature
-  function test(object: { [key in string]: string }): string; // overloaded signature
+  function test(name: string): string // overloaded signature
+  function test(age: number): string // overloaded signature
+  function test(single: boolean): string // overloaded signature
+  function test(object: { [key in string]: string }): string // overloaded signature
   function test(value: unknown): string {
     // implementation signature
     switch (typeof value) {
       case "string":
-        return `My name is ${value}.`;
+        return `My name is ${value}.`
       case "number":
-        return `I'm ${value} years old.`;
+        return `I'm ${value} years old.`
       case "boolean":
-        return value ? "I'm single." : "I'm not single.";
+        return value ? "I'm single." : "I'm not single."
       case "object":
         if (
           value !== null &&
           "custom" in value &&
           typeof value.custom === "string"
         )
-          return value.custom;
+          return value.custom
 
-        return "some shit";
+        return "some shit"
 
       default:
-        throw new Error("Invalid Operation!");
+        throw new Error("Invalid Operation!")
     }
   }
 
-  test("Remo"); // returns "My name is Remo."
-  test(26); // returns "I'm 26 years old.";
-  test(false); // returns "I'm not single.";
-  test({ custom: "custom" }); // Error
+  test("Remo") // returns "My name is Remo."
+  test(26) // returns "I'm 26 years old.";
+  test(false) // returns "I'm not single.";
+  test({ custom: "custom" }) // Error
 }
 
 namespace function_overloading_demo_2 {
-  function test(name: string): string;
-  function test(age: number): number; // Error
-  function test(single: boolean): string;
+  function test(name: string): string
+  function test(age: number): number // Error
+  function test(single: boolean): string
   function test(value: string | number | boolean): string {
     switch (typeof value) {
       case "string":
-        return `My name is ${value}.`;
+        return `My name is ${value}.`
       case "number":
-        return `I'm ${value} years old.`;
+        return `I'm ${value} years old.`
       case "boolean":
-        return value ? "I'm single." : "I'm not single.";
+        return value ? "I'm single." : "I'm not single."
       default:
-        throw new Error("Invalid Operation!");
+        throw new Error("Invalid Operation!")
     }
   }
 }
 
-document.createElement;
+document.createElement

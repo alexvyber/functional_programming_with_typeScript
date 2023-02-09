@@ -1,13 +1,9 @@
-import { fromEvent } from "rxjs";
+import { fromEvent } from "rxjs"
 
 namespace observable_demo_4 {
+  const observable = fromEvent(document, "click")
 
-    const observable = fromEvent(document, "click");
+  const subscription = observable.subscribe(value => console.log(value))
 
-    const subscription = observable.subscribe(
-        (value) => console.log(value)
-    );
-    
-    subscription.unsubscribe();
-
+  subscription.unsubscribe()
 }

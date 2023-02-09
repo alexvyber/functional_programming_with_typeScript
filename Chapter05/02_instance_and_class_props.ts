@@ -1,6 +1,5 @@
 namespace instance_and_calss_props_demo_1 {
-
-    /*
+  /*
 
     // You can do the following in JavaScript
 
@@ -29,8 +28,7 @@ namespace instance_and_calss_props_demo_1 {
     person1.name; // "Remo"
 
     */
-
-    /*
+  /*
 
         // Console output
 
@@ -44,20 +42,16 @@ namespace instance_and_calss_props_demo_1 {
         }'
     
     */
-
 }
 
 namespace instance_and_calss_props_demo_2 {
+  class MathHelper {
+    // class property
+    public static PI = 3.14159265359
 
-    class MathHelper {
-
-        // class property
-        public static PI = 3.14159265359;
-
-        // class method
-        public static areaOfCircle(radius: number) {
-            return radius * radius * MathHelper.PI;
-        }
+    // class method
+    public static areaOfCircle(radius: number) {
+      return radius * radius * MathHelper.PI
     }
-
+  }
 }

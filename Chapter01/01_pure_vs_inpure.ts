@@ -1,27 +1,27 @@
 module inpure {
   function isIndexPage() {
-    return window.location.pathname === "/";
+    return window.location.pathname === "/"
   }
 }
 
 module pure {
   function isIndexPage(pathname: string) {
-    return pathname === "/";
+    return pathname === "/"
   }
 
   function shouldReturnTrueWhenPathIsIndex() {
-    let expected = true;
-    let result = isIndexPage("/");
+    let expected = true
+    let result = isIndexPage("/")
     if (expected !== result) {
-      throw new Error(`Expected ${expected} to equals ${result}`);
+      throw new Error(`Expected ${expected} to equals ${result}`)
     }
   }
 
   function shouldReturnFalseWhenPathIsNotIndex() {
-    let expected = false;
-    let result = isIndexPage("/someotherpage");
+    let expected = false
+    let result = isIndexPage("/someotherpage")
     if (expected !== result) {
-      throw new Error(`Expected ${expected} to equals ${result}`);
+      throw new Error(`Expected ${expected} to equals ${result}`)
     }
   }
 }
